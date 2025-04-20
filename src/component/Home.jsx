@@ -31,7 +31,7 @@ const Home = () => {
         {showContent && (
           <div className="overflow-hidden whitespace-nowrap mt-24  md:mt-20">
             <p className="animate-marquee text-sm text-white font-semibold uppercase tracking-widest">
-              New York / Los Angeles / Chicago / Houston / Phoenix /
+              Miami /New York / Los Angeles / Chicago / Houston / Phoenix /
               Philadelphia / San Antonio / San Diego / Dallas / San Jose /
               Austin / Jacksonville / Fort Worth / Columbus / Charlotte / San
               Francisco / Indianapolis / Seattle / Denver / Washington D.C. /
@@ -42,14 +42,14 @@ const Home = () => {
           </div>
         )}
 
-        {/* Middle: Downtown Typing Animation */}
+        {/* Middle: West Avenue Music Typing Animation */}
         <div className="flex-grow flex items-center justify-center mx-auto">
           <h1
-            className={`text-5xl md:text-[160px]  font-extrabold uppercase ${
+            className={`text-5xl md:text-[80px]  font-extrabold uppercase ${
               loading ? "typing-animation" : ""
             }`}
           >
-            Downtown
+            WEST AVENUE MUSIC
           </h1>
         </div>
 
@@ -57,29 +57,13 @@ const Home = () => {
         {showContent && (
           <div className="grid  md:grid-cols-3 gap-6 text-sm md:text-lg  mx-auto pb-6 text-white">
             <p className="text-start">
-              At Downtown Talent, we partner with leading corporations,
-              hospitality groups, and private clients to deliver world-class
-              artists for branded partnerships, activations, and events. Our
-              boutique talent roster includes some of the most reliable and
-              experienced professionals in the entertainment industry,
-              consisting of professional actors, photographers, influencers, and
-              DJs.
+            At WEST AVE MUSIC, we work with top corporations, hospitality groups, and private clients to provide world-class talent for events, activations, and brand partnerships. Our curated roster features trusted professionals—actors, photographers, influencers, and DJs—known for delivering exceptional experiences.
             </p>
             <p className="text-start">
-              We take pride in crafting top-quality, tailored musical
-              experiences for every venue, event, and client we collaborate
-              with. Since our inception in New York City in 2017, our artists
-              have graced over 4000 events worldwide, ranging from exclusive
-              nightclubs and private gatherings to high-profile corporate
-              functions, fashion shows, and bespoke weddings.
+            Since launching in Miami in 2020, we've specialized in delivering high-quality, customized musical experiences for venues, events, and clients around the world. Our artists have performed at over 4,000 events, from private parties and luxury weddings to top-tier corporate functions and fashion shows.
             </p>
             <p className="text-start">
-              Expanding our footprint into flagship markets including Los
-              Angeles, Miami, Chicago, Atlanta, and Dallas, we continue to
-              deliver unparalleled service to a diverse clientele. At Downtown
-              Talent, we're all about creating moments that last a lifetime.
-              Your satisfaction is our success, making every occasion uniquely
-              special and unforgettable.
+            As we expand into key markets including Los Angeles, Miami, Chicago, Atlanta, Dallas, Charlotte, Las Vegas, San Francisco, and Toronto, WEST AVE MUSIC remains committed to delivering exceptional service to a wide range of clients. Our mission is to create unforgettable moments that leave a lasting impression—because your experience is our top priority
             </p>
           </div>
         )}
