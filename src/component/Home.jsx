@@ -24,7 +24,7 @@ const Home = () => {
         preload="auto"
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="/clip.mp4" type="video/mp4" />
+        <source src="/1min.mp4" type="video/mp4" />
       </video>
 
       {/* Overlay Content */}
