@@ -65,7 +65,7 @@ const Home = () => {
             Since launching in Miami in 2020, we've specialized in delivering high-quality, customized musical experiences for venues, events, and clients around the world. Our artists have performed at over 4,000 events, from private parties and luxury weddings to top-tier corporate functions and fashion shows.
             </p>
             <p className="text-start">
-            As we expand into key markets including Los Angeles, Miami, Chicago, Atlanta, Dallas, Charlotte, Las Vegas, San Francisco, and Toronto, WEST AVE MUSIC remains committed to delivering exceptional service to a wide range of clients. Our mission is to create unforgettable moments that leave a lasting impression—because your experience is our top priority
+            As we expand into key markets including Los Angeles, Miami, Chicago, Atlanta, Dallas, Charlotte, Las Vegas, San Francisco, and Toronto, WEST AVE MUSIC remains committed to delivering exceptional service to a wide range of clients. Our mission is to create unforgettable moments that leave a lasting impression—because your experience is our top priority.
             </p>
           </div>
         )}
