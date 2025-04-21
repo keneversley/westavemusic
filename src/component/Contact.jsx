@@ -7,8 +7,8 @@ const Contact = () => {
 
       <div className="flex justify-start mt-24 w-full md:w-96">
         <p className="text-white">
-          Our DJ's are nightLife veterans who work in a diverse array of clubs
-          and nenues, bringing their talent and years of experience to our
+          Our DJ's are nightlife veterans who work in a diverse array of clubs
+          and venues, bringing their talent and years of experience to our
           clients' events.
         </p>
       </div>

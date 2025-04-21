@@ -59,7 +59,7 @@ const Home = () => {
         {showContent && (
           <div className="grid  md:grid-cols-3 gap-6 text-sm md:text-lg  mx-auto pb-6 text-white">
             <p className="text-start">
-            At WEST AVE MUSIC, we work with top corporations, hospitality groups, and private clients to provide world-class talent for events, activations, and brand partnerships. Our curated roster features trusted professionals—actors, photographers, influencers, and DJs—known for delivering exceptional experiences.
+            At WEST AVE MUSIC, we work with top corporations, hospitality groups, and private clients to provide world-class talent for events, launches, and brand partnerships. Our curated roster features trusted professionals—actors, photographers, influencers, and DJs—known for delivering exceptional experiences.
             </p>
             <p className="text-start">
             Since launching in Miami in 2020, we've specialized in delivering high-quality, customized musical experiences for venues, events, and clients around the world. Our artists have performed at over 4,000 events, from private parties and luxury weddings to top-tier corporate functions and fashion shows.
