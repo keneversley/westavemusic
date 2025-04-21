@@ -159,7 +159,7 @@ const ContactForm = () => {
         <div className="flex ">
           <ReCAPTCHA
             ref={recaptchaRef}
-            sitekey="6LcsrBgrAAAAAPUdsU7SvUePGn248qAo1sfE_O_e"
+            sitekey="6Lfr9R8rAAAAAKAKLJLvTt6quzJjMPaWnxN9Kqlr"
             onChange={(value) => setCaptchaValue(value)}
           />
         </div>
