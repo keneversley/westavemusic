@@ -22,7 +22,7 @@ const Home = () => {
         loop
         playsInline
         preload="auto"
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0 filter blur-sm brightness-75" 
       >
         <source src="/1min.mp4" type="video/mp4" />
       </video>
