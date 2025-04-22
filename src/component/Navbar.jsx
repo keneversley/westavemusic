@@ -20,7 +20,7 @@ const Navbar = () => {
 
       <div className=" flex gap-10 items-center justify-center">
         <p className="uppercase text-bold text-center  text-white relative group w-fit cursor-pointer">
-          +1 305 924 7382
+          {/* +1 305 924 7382 */}
           <span className="absolute left-0 bottom-0 h-[2px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
         </p>
         <a
