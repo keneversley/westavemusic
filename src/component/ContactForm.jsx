@@ -72,47 +72,45 @@
 
 // export default ContactForm;
 import React, { useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
   const formRef = useRef();
+  const recaptchaRef = useRef();
+  const [captchaValue, setCaptchaValue] = useState(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [recaptchaToken, setRecaptchaToken] = useState("");
-
-  const siteKey = "6Lfr9R8rAAAAAKAKLJLvTt6quzJjMPaWnxN9Kqlr"; // Your reCAPTCHA Enterprise site key
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!captchaValue) {
+      alert("Please verify you are not a robot.");
+      return;
+    }
+
     setIsSubmitting(true);
 
-    // Trigger reCAPTCHA Enterprise and get token
-    window.grecaptcha.enterprise.ready(() => {
-      window.grecaptcha.enterprise
-        .execute(siteKey, { action: "submit" })
-        .then((token) => {
-          setRecaptchaToken(token);
-
-          // Use EmailJS to send form after getting token
-          emailjs
-            .sendForm(
-              "service_n93o0v8", // EmailJS service ID
-              "template_mngqvo1", // EmailJS template ID
-              formRef.current,
-              "LJzkDFZaZVLa_6ww2" // EmailJS public key
-            )
-            .then(() => {
-              alert("Form submitted successfully!");
-              formRef.current.reset();
-              setRecaptchaToken("");
-            })
-            .catch((error) => {
-              console.error("EmailJS Error:", error);
-              alert("An error occurred. Please try again.");
-            })
-            .finally(() => setIsSubmitting(false));
-        });
-    });
+    emailjs
+      .sendForm(
+        "service_n93o0v8",        
+        "template_mngqvo1",       
+        formRef.current,
+        "LJzkDFZaZVLa_6ww2"      
+      )
+      .then(
+        () => {
+          alert("Form submitted successfully!");
+          formRef.current.reset();
+          setCaptchaValue(null);
+          recaptchaRef.current.reset();
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          alert("An error occurred. Please try again.");
+        }
+      )
+      .finally(() => setIsSubmitting(false));
   };
 
   return (
@@ -157,8 +155,13 @@ const ContactForm = () => {
           className="w-full uppercase bg-transparent text-white border-t-2 border-b-2 border-white outline-none placeholder-gray-400 py-2 resize-none"
         ></textarea>
 
-        {/* Hidden field to include reCAPTCHA token in EmailJS form */}
-        <input type="hidden" name="recaptchaToken" value={recaptchaToken} />
+        <div className="flex justify-center">
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            sitekey="6Lfr9R8rAAAAAKAKLJLvTt6quzJjMPaWnxN9Kqlr"
+            onChange={(value) => setCaptchaValue(value)}
+          />
+        </div>
 
         <button
           type="submit"
@@ -173,3 +176,5 @@ const ContactForm = () => {
 };
 
 export default ContactForm;
+
+
