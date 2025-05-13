@@ -107,7 +107,7 @@ const PayNow = () => {
           emailjs
           .send(
             "service_b1nhkup",
-            "template_vvxrx4f",
+            "template_uisz8mv", //this template id for payment related mail
             {
               customer_name: formData.name,
               customer_email: formData.email,
