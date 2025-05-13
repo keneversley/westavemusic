@@ -44,7 +44,7 @@ const PayNow = () => {
     }
 
     try {
-      const payments = window.Square.payments('sandbox-sq0idb-wETAJ3Vhq3ljWtBn0xoB8Q', 'LC9S6PK7ZRWHR');
+      const payments = window.Square.payments('sq0idp-B2syX7GnXVmRROGHLLfKrg', '3FRM38BHHDGWZ');//first argument 
       const card = await payments.card();
       await card.attach('#card-container');
       setCard(card);
