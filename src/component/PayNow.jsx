@@ -358,6 +358,27 @@ const PayNow = () => {
             .catch((error) => {
               console.error("EmailJS Error:", error);
             });
+           // want to sent another mail to customer with payment details
+           emailjs
+           .send(
+             "service_b1nhkup",
+             "template_grq0olu",
+             {
+               customer_name: formData.name,
+               customer_email: formData.email,
+               payment_amount: formData.amount,
+               payment_id: data.paymentId,
+               payment_status: data.status,
+               payment_receipt_url: data.receiptUrl
+             },
+             "zGbTtUsh87tzsK45h"
+           )
+           .then(() => {
+             console.log("Email sent successfully!");
+           })
+           .catch((error) => {
+             console.error("EmailJS Error:", error);
+           });
 
           setSuccess(true);
         } else {
