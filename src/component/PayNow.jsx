@@ -242,6 +242,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import emailjs from '@emailjs/browser';
+import logo from '../assets/squarelogo.png';
 
 const PayNow = () => {
   const [loading, setLoading] = useState(false);
@@ -253,7 +254,7 @@ const PayNow = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    amount: "27.00"
+    amount: "30.00"
   });
 
   useEffect(() => {
@@ -422,19 +423,28 @@ const PayNow = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-900 pt-24 px-4 flex flex-col items-center">
+    <div className="min-h-screen bg-900 pt-24 px-4 flex flex-col items-center">
       {/* Image directly below nav */}
       <div className="mb-10">
         <img
           src="/images/talib.PNG"
           alt="Talib"
-          className="w-48 h-auto mx-auto rounded shadow-lg"
+          className="w-96 h-auto mx-auto rounded shadow-lg"
         />
       </div>
+{/* 
+      <h1 className="text-3xl font-bold text-black mb-10">Get Your Talib Kweli Tickets Now</h1> */}
+ <div className="flex flex-col items-center mb-10">
+  <h1 className="text-3xl font-bold text-black mb-4">
+    TALIB KWELI @ FOLIA TICKETS
+  </h1>
+<small>ALL SALES FINAL AND NO RE-ENTRY DAY OF THE EVENT</small> 
+</div>
 
-      <h1 className="text-3xl font-bold text-white mb-10">Make a Payment</h1>
 
       <div className="w-full max-w-md bg-white/10 backdrop-blur-sm p-6 rounded-lg shadow-lg">
+      <img src={logo} alt="Logo" className="w-24 h-auto mb-6 mx-auto" />
+
         {error && (
           <div className="mb-4 p-3 bg-red-100 text-red-700 rounded-md">
             {error}
@@ -443,33 +453,33 @@ const PayNow = () => {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <label className="block text-white text-sm font-medium">Full Name</label>
+            <label className="block text- text-sm font-medium">Full Name</label>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full bg-transparent text-white border border-white p-2 rounded-md"
+              className="w-full bg-transparent text-black border border-black p-2 rounded-md"
               required
             />
           </div>
 
           <div className="space-y-2">
-            <label className="block text-white text-sm font-medium">Email</label>
+            <label className="block text-black text-sm font-medium">Email</label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full bg-transparent text-white border border-white p-2 rounded-md"
+              className="w-full bg-transparent text-black border border-black p-2 rounded-md"
               required
             />
           </div>
 
           <div className="space-y-2">
-            <label className="block text-white text-sm font-medium">Amount</label>
-            <div className="flex items-center border border-white rounded-md overflow-hidden">
-              <span className="bg-white/20 text-white px-3 py-2">$</span>
+            <label className="block text-black text-sm font-medium">Amount</label>
+            <div className="flex items-center border border-black rounded-md overflow-hidden">
+              <span className="bg-black/20 text-black px-3 py-2">$</span>
               <input
                 type="number"
                 name="amount"
@@ -477,22 +487,22 @@ const PayNow = () => {
                 onChange={handleChange}
                 min="1"
                 step="0.01"
-                className="w-full bg-transparent text-white border-0 p-2"
+                className="w-full bg-transparent text-black border-0 p-2"
                 required
               />
             </div>
           </div>
 
           <div className="space-y-2">
-            <label className="block text-white text-sm font-medium">Card Details</label>
-            <div id="card-container" ref={cardContainerRef} className="p-3 border border-white rounded-md min-h-[40px]" />
-            {!card && <p className="text-white text-xs mt-2">Loading payment form...</p>}
+            <label className="block text-black text-sm font-medium">Card Details</label>
+            <div id="card-container" ref={cardContainerRef} className="p-3 border border-black rounded-md min-h-[40px]" />
+            {!card && <p className="text-black text-xs mt-2">Loading payment form...</p>}
           </div>
 
           <button
             type="submit"
             disabled={loading || !card}
-            className="w-full border border-white text-white bg-transparent hover:bg-white hover:text-black transition-all py-2 font-semibold disabled:opacity-50"
+            className="w-full border border-black text-black bg-transparent hover:bg-black hover:text-black transition-all py-2 font-semibold disabled:opacity-50"
           >
             {loading ? "Processing..." : "Pay Now"}
           </button>
