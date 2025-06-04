@@ -244,7 +244,7 @@ import React, { useState, useEffect, useRef } from "react";
 import emailjs from '@emailjs/browser';
 import logo from '../assets/squarelogo.png';
 
-const PayNow = () => {
+const Tickets = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
@@ -453,7 +453,9 @@ const PayNow = () => {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div className="space-y-2">
-            <label className="block text- text-sm font-medium">Full Name</label>
+            {/* <label className="block text- text-sm font-medium">Full Name</label> */}
+            <label className="block text-black text-sm font-medium">Full Name</label>
+
             <input
               type="text"
               name="name"
@@ -512,4 +514,4 @@ const PayNow = () => {
   );
 };
 
-export default PayNow;
+export default Tickets;

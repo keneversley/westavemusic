@@ -6,10 +6,12 @@ const Navbar = () => {
   const location = useLocation();
 
   const isContactPage = location.pathname === "/contact";
-  const isPayNowPage = location.pathname === "/paynow";
+  // const isPayNowPage = location.pathname === "/paynow";
+  const isTicketsPage = location.pathname === "/tickets";
+
   
   const getLink = () => {
-    if (isContactPage || isPayNowPage) {
+    if (isContactPage || isTicketsPage) {
       return {
         href: "/",
         text: "Exit Window"
@@ -41,7 +43,7 @@ const Navbar = () => {
         </p>
         
         {/* PayNow Link - only show if not on PayNow page */}
-        {!isPayNowPage && (
+        {/* {!isPayNowPage && (
           <a
             href="/paynow"
             className="text-black hover:text-blue-600 font-semibold"
@@ -50,8 +52,18 @@ const Navbar = () => {
               [<span className="px-6 animate-fadeInOut">Talib Kweli Tickets</span>]
             </div>
           </a>
-        )}
-        
+        )} */}
+        {!isTicketsPage && (
+  <a
+    href="/tickets"
+    className="text-black hover:text-blue-600 font-semibold"
+  >
+    <div className="text-white bg-black flex justify-center items-center">
+      [<span className="px-6 animate-fadeInOut">Talib Kweli Tickets</span>]
+    </div>
+  </a>
+)}
+
         {/* Contact Link - show except when on the contact page */}
         {!isContactPage && (
           <a
