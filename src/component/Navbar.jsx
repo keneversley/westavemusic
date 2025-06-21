@@ -59,7 +59,7 @@ const Navbar = () => {
     className="text-black hover:text-blue-600 font-semibold"
   >
     <div className="text-white bg-black flex justify-center items-center">
-      [<span className="px-6 animate-fadeInOut">Talib Kweli Tickets</span>]
+      [<span className="px-6 animate-fadeInOut">Coming Soon</span>]
     </div>
   </a>
 )}
